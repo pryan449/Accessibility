@@ -8,7 +8,6 @@ Installation
 http://sourceforge.net/projects/freetts/files/
 2. Extract file 
 3. Navigate to lib folder
-4. unjar the jars
 5. copy all jar files
 6. open IDE (tested and working in netbeans)
 7. start a new project
