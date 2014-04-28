@@ -1,9 +1,5 @@
 package TTS;
 
-
-
-
-
 import com.sun.speech.freetts.VoiceManager;
 
 /**
@@ -15,43 +11,35 @@ public class TextToSpeech {
     public static void main(String[] args) {
         Voice voiceKevin16 = new Voice("kevin16");
 
-        String[] thingsToSay = new String[]
-        {
-            "hello world, my name is Pat.",
-            
-        };
+        String[] thingsToSay = new String[]{
+            "hello world, my name is Pat.",};
 
         voiceKevin16.say(thingsToSay);
     }
 }
 
-class Voice
-{
+class Voice {
+
     private String name;
     private com.sun.speech.freetts.Voice systemVoice;
 
-    public Voice(String name)
-    {
+    public Voice(String name) {
         this.name = name;
         this.systemVoice = VoiceManager.getInstance().getVoice(this.name);
         this.systemVoice.allocate();
     }
 
-    public void say(String[] thingsToSay)
-    {
-        for (int i = 0; i < thingsToSay.length; i++)
-        {
-            this.say( thingsToSay[i] );
+    public void say(String[] thingsToSay) {
+        for (int i = 0; i < thingsToSay.length; i++) {
+            this.say(thingsToSay[i]);
         }
     }
 
-    public void say(String thingToSay)
-    {
+    public void say(String thingToSay) {
         this.systemVoice.speak(thingToSay);
     }
 
-    public void dispose()
-    {
+    public void dispose() {
         this.systemVoice.deallocate();
     }
 }
