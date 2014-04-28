@@ -17,7 +17,6 @@ public class FrameTextToSpeech extends javax.swing.JFrame {
 
     //This method is called from within the constructor to initialize the form.
     @SuppressWarnings("unchecked")
-     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -62,7 +61,7 @@ public class FrameTextToSpeech extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>
+    }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {
         VoiceManager vm = VoiceManager.getInstance();
