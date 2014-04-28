@@ -10,7 +10,7 @@ import com.sun.speech.freetts.VoiceManager;
 
 public class FrameTextToSpeech extends javax.swing.JFrame {
 
-     //Creates new form FrameTextToSpeech
+    //Creates new form FrameTextToSpeech
     public FrameTextToSpeech() {
         initComponents();
     }
@@ -69,7 +69,7 @@ public class FrameTextToSpeech extends javax.swing.JFrame {
 
         Voice voice = vm.getVoice("kevin16");
         String text = jTextArea1.getText();
-        String string[] = text.split(" ");
+        String string[] = text.split("  ");
         voice.allocate();
         for (int i = 0; i < string.length; i++) {
             voice.speak(string[i]);
@@ -86,7 +86,7 @@ public class FrameTextToSpeech extends javax.swing.JFrame {
             }
         });
     }
-
+      //import and declarations for GUI
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
